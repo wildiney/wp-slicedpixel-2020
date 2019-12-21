@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <div id="portfolio">
   <div class="container">
-    <h2>Portfolio</h2>
+    <h2>Works</h2>
     <?php
-    $posts = new WP_Query(array('category_name' => 'Portfolio'));
+    $posts = new WP_Query(array('category_name' => 'Works'));
 
     if ($posts->have_posts()) :
       while ($posts->have_posts()) : $posts->the_post();

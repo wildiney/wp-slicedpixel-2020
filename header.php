@@ -38,8 +38,8 @@
         </li>
       </ul>
       <ul id="menu-top">
-        <li><a href="/index.php/about">Sobre</a></li>
-        <li><a href="/index.php/portfolio">Portfolio</a></li>
+        <li><a href="/about">Sobre</a></li>
+        <li><a href="/works">Works</a></li>
       </ul>
     </nav>
     <div class="header-img">
