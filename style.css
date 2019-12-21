@@ -1388,4 +1388,8 @@ footer p {
       align-self: center;
   color: whitesmoke;
 }
+
+.blocks-gallery-grid, .wp-block-gallery {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
