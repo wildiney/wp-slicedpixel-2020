@@ -33,7 +33,7 @@
 
       endwhile;
     else : ?>
-      <h2>Ainda não exitem posts disponíveis</h2>
+      <h2>Ainda não existem posts disponíveis</h2>
     <?php endif; ?>
   </div>
 </main>
