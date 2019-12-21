@@ -4,7 +4,7 @@
 
   <div class="container">
     <?php
-    $posts = new WP_Query(array('category_name' => 'Home'));
+    $posts = new WP_Query(array('category_name' => 'Destaque'));
     if ($posts->have_posts()) :
       while ($posts->have_posts()) : $posts->the_post();
     ?>
