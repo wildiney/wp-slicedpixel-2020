@@ -1,24 +1,41 @@
 <?php get_header(); ?>
-<div id="portfolio">
+<?php get_template_part('template-parts/pages-header'); ?>
+
+<div id="works">
   <div class="container">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class="item">
-          <div class="card-image">
-            <?php
-            if (has_post_thumbnail()) { ?>
-              <a href="<?php the_permalink() ?>">
-                <?php the_post_thumbnail(array(500, 350)); ?>
-              </a>
-            <?php } ?>
+    <h2>Works</h2>
+    <?php
+    $posts = new WP_Query(array('category_name' => 'Works'));
+
+    if ($posts->have_posts()) :
+      while ($posts->have_posts()) : $posts->the_post();
+    ?>
+        <div class="row mt-8 portfolio">
+          <div class="col-sm-12 col-md-6">
+            <div class="thumbnail">
+              <?php
+              if (has_post_thumbnail()) { ?>
+                <a href="<?php the_permalink() ?>">
+                  <?php the_post_thumbnail(); ?>
+                </a>
+              <?php } ?>
+            </div>
           </div>
-          <div class="card-text">
-            <?php the_title('<h2>', '</h2>'); ?>
-            <p><?php the_tags(); ?></p>
-            <p><?php the_excerpt(); ?>
+
+          <div class="col-sm-12 col-md-6">
+            <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+            <p><?php the_tags(''); ?></p>
+            <div class="home__excerpt">
+              <p><?php the_excerpt(); ?>
+            </div>
           </div>
         </div>
+
+
+
     <?php endwhile;
     endif;
+    wp_reset_postdata();
     ?>
   </div>
 </div>

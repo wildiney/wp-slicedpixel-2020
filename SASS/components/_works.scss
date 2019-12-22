@@ -1,0 +1,58 @@
+// PORTFOLIO
+.portfolio {
+    animation: moveUp 1s ease-out;
+    h3 a:link {
+      font-size: 2.5rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .thumbnail{
+      transition: 250ms all ease-out;
+      backface-visibility: hidden;
+      box-sizing: border-box;
+      box-shadow: none;
+      &:hover{
+        backface-visibility: hidden;
+        box-shadow: inset 0px 0px 0px 50px whitesmoke;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(0);
+      transition: 500ms all ease-out;
+      border:none;
+      &:hover {
+        border:6px solid whitesmoke;
+        transform: scale(1.1);
+        filter: grayscale(100%);
+      }
+    }
+  }
+  
+  #works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    h2{
+      a:link,
+      a:visited,
+      :active{
+        margin-bottom: 1.5rem;
+        text-decoration: none;
+      }
+      &:hover{
+        color: lighten($main-color,50%);
+  
+      }
+    }
+  }
+  .thumbnail {
+    overflow: hidden;
+  }
+  .thumbnail img {
+    width: 100% !important;
+    height: auto;
+  }
+  

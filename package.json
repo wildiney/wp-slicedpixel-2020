@@ -1,0 +1,27 @@
+{
+  "name": "wp-slicedpixel-2020",
+  "version": "1.0.0",
+  "description": "Wordpress theme for SlicedPixel.com",
+  "main": "index.php",
+  "scripts": {
+    "scss:watch": "node-sass ./style.scss ./style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildiney/wp-slicedpixel-2020.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "author": "Wildiney Masi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wildiney/wp-slicedpixel-2020/issues"
+  },
+  "homepage": "https://github.com/wildiney/wp-slicedpixel-2020#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "node-sass": "^4.13.0"
+  }
+}

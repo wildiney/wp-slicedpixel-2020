@@ -28,20 +28,16 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header class="main-header">
-    <nav id="main-nav">
-      <ul id="brand">
-        <li>
-          <a href="<?php echo get_bloginfo('wpurl'); ?>">
-            <h1><?php echo get_bloginfo('name'); ?></h1>
-          </a>
-        </li>
-      </ul>
-      <ul id="menu-top">
-        <li><a href="/about">Sobre</a></li>
-        <li><a href="/works">Works</a></li>
-      </ul>
-    </nav>
-    <div class="header-img">
-    </div>
-  </header>
+  <nav class="nav-main">
+    <ul class="nav-main__brand">
+      <li>
+        <a href="<?php echo get_bloginfo('wpurl'); ?>">
+          <?php echo get_bloginfo('name'); ?>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav-main__nav">
+      <li><a href="/about">Sobre</a></li>
+      <li><a href="/works">Works</a></li>
+    </ul>
+  </nav>

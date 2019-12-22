@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: $fontFamily;
+  // 10px/16px = 62.5%
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+h3 {
+  margin: 0;
+}

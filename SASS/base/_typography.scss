@@ -1,0 +1,82 @@
+body {
+  font-family: inherit;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $main-color;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: left;
+}
+p {
+  font-size: 1.5rem;
+  text-align: left;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  line-height: 1.5;
+}
+
+a,
+a:active,
+a:visited {
+  color: $main-color;
+}
+a:hover {
+  color: darken($main-color, 25%);
+}
+
+.nav-main {
+  &__brand {
+    a:link,
+    a:visited,
+    a:active {
+      color: whitesmoke;
+      text-decoration: none;
+      font-size: 2.3rem;
+    }
+  }
+  &__nav {
+    a:link,
+    a:visited,
+    a:active {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      font-size: 1.6rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.header__main {
+  &--title {
+    h1 {
+      text-align: center;
+      font-size: 7vw;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+footer {
+  p {
+    text-align: center;
+    color: whitesmoke;
+  }
+}
