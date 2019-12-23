@@ -16,7 +16,7 @@
         rgba(0, 0, 0, 0.9),
         rgba(0, 0, 0, 0)
       ),
-      url("./assets/images/trofeus-v.01.png");
+      url('./assets/images/trofeus-v.01.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,4 +50,11 @@
     width: 100%;
     z-index: 50;
   }
+}
+
+.brand {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  z-index: 3000;
 }

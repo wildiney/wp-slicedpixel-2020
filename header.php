@@ -28,16 +28,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <nav class="nav-main">
-    <ul class="nav-main__brand">
-      <li>
-        <a href="<?php echo get_bloginfo('wpurl'); ?>">
-          <?php echo get_bloginfo('name'); ?>
-        </a>
-      </li>
-    </ul>
-    <ul class="nav-main__nav">
-      <li><a href="/about">Sobre</a></li>
-      <li><a href="/works">Works</a></li>
-    </ul>
-  </nav>
+  <div class="brand">
+    <a href="<?php echo get_home_url(); ?>">
+      <?php echo get_bloginfo('name'); ?>
+    </a>
+  </div>
+  <?php get_template_part('template-parts/navigation'); ?>
