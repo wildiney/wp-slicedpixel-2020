@@ -7,3 +7,34 @@
 @mixin poligon-03 {
   clip-path: polygon(50% 100%, 0 80%, 0 0, 100% 0, 100% 80%);
 }
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+}
+
+// MEDIA QUERIES
+@mixin mq($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint_sm) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (min-width: $breakpoint_md) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $breakpoint_lg) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $breakpoint_xl) {
+      @content;
+    }
+  }
+}
