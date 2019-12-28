@@ -1,12 +1,13 @@
 /*
 Theme Name: SlicedPixel 2020
-Text Domain: slicedpixel
+Author: Wildiney Di Masi
 Version: 1.0
+
+Text Domain: slicedpixel.com
 Requires at least: 4.7
 Requires PHP: 5.2.4
-Description:
-Tags: 
-Author: Fernando Masi
+Description: Just a theme for SlicedPixel.com
+Tags: theme, slicedpixel
 Author URI: https://slicedpixel.com/
 Theme URI: https://slicedpixel.com/themes/slicedpixel-2020/
 License: GNU General Public License v2 or later
@@ -16,4 +17,4 @@ All files, unless otherwise stated, are released under the GNU General Public
 License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 */
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
-@import url('./css/style.min.css');
+@import url('./css/style.css');

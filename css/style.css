@@ -253,14 +253,14 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url("./assets/images/trofeus-v.01.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url("../assets/images/trofeus-v.01.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: 1s all ease-out; }
     .header__main--img:hover {
       transform: scale(1.1); }
-  .header__main--arrow {
+  .header__main--scroll {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -269,9 +269,9 @@ footer {
     padding: 1.5rem 0;
     display: flex;
     animation: bounceUP 1.5s ease-in-out infinite; }
-    .header__main--arrow:hover {
+    .header__main--scroll:hover {
       background-color: rgba(0, 0, 0, 0.1); }
-    .header__main--arrow a {
+    .header__main--scroll a {
       margin: 0 auto; }
   .header__main--title {
     position: absolute;
@@ -634,7 +634,7 @@ footer {
 .navigation__item {
   margin: 1rem; }
 
-.navigation__link:link, .navigation__link:visited {
+.navigation a:link, .navigation a:visited {
   display: inline-block;
   font-size: 3rem;
   font-weight: 300;
@@ -646,7 +646,7 @@ footer {
   background-size: 250%;
   transition: all 0.4s; }
 
-.navigation__link:hover, .navigation__link:active {
+.navigation a:hover, .navigation a:active {
   background-position: 100%;
   color: whitesmoke;
   transform: translateX(1rem); }

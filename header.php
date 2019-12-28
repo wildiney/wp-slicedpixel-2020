@@ -22,15 +22,15 @@
   }
   ?>
   <meta name="description" content="<?php echo get_page_meta_description(); ?>">
-  <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
-  <title><?php wp_title(); ?></title>
   <?php wp_head() ?>
 </head>
 
 <body <?php body_class(); ?>>
+
   <div class="brand">
     <a href="<?php echo get_home_url(); ?>">
       <?php echo get_bloginfo('name'); ?>
     </a>
   </div>
+
   <?php get_template_part('template-parts/navigation'); ?>

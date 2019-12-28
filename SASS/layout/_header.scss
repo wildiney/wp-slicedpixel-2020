@@ -16,7 +16,7 @@
         rgba(0, 0, 0, 0.9),
         rgba(0, 0, 0, 0)
       ),
-      url('./assets/images/trofeus-v.01.png');
+      url('../assets/images/trofeus-v.01.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@
       transform: scale(1.1);
     }
   }
-  &--arrow {
+  &--scroll {
     position: absolute;
     bottom: 0;
     width: 100%;

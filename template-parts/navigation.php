@@ -5,10 +5,17 @@
     </label>
     <div class="navigation__background">&nbsp;</div>
     <nav class="navigation__nav">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="/works" class="navigation__link">Sobre</a></li>
-        <li class="navigation__item"><a href="" class="navigation__link">Works</a></li>
+      <?php
+      wp_nav_menu(
+        array(
+          'menu_class' => "navigation__list",
+          'theme_location' => 'header-menu',
+        )
+      ); ?>
+      <!-- <ul class="navigation__list">
+        <li class="navigation__item"><a href="<?php echo site_url('/about'); ?>" class="navigation__link">Sobre</a></li>
+        <li class="navigation__item"><a href="<?php echo site_url('/works'); ?>" class="navigation__link">Works</a></li>
         <li class="navigation__item"><a href="" class="navigation__link">Contato</a></li>
-      </ul>
+      </ul> -->
     </nav>
   </div>
