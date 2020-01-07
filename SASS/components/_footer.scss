@@ -1,4 +1,7 @@
-footer {
+.footer {
+  grid-row: 3/4;
+  grid-column: full-start/full-end;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,12 +10,14 @@ footer {
   align-items: center;
   background-color: $color-gray;
   width: 100%;
-  margin-top: 50px;
-  
+  margin-top: 2rem;
+
   p {
     flex: 1;
     margin: 0;
     text-align: center;
     align-self: center;
+    color: $color-white;
+    font-size: 1.2rem;
   }
 }

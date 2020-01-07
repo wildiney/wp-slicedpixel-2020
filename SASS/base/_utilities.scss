@@ -1,42 +1,22 @@
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+@for $i from 1 through 5{
+  .mt-#{$i}{
+    margin-top:#{$i}rem !important;
+  }
 }
-.img-thumbnail {
-  padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
-  max-width: 100%;
-  height: auto;
+@for $i from 1 through 5{
+  .mb-#{$i}{
+    margin-bottom:#{$i}rem !important;
+  }
 }
-
-// ICON
-i {
-  border: solid whitesmoke;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 1rem;
-  &.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+@for $i from 1 through 5{
+  .ml-#{$i}{
+    margin-left:#{$i}rem !important;
+  }
+}
+@for $i from 1 through 5{
+  .mr-#{$i}{
+    margin-right:#{$i}rem !important;
   }
 }
 
 
-.container-ar-16x9 {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-}
-.blocks-gallery-grid,
-.wp-block-gallery {
-  width: 100%;
-}

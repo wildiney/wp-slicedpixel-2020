@@ -1,5 +1,5 @@
 // FONT
-$fontFamily: "Titillium Web", sans-serif;
+$font-family: 'Titillium Web', sans-serif;
 
 // SIZES
 $menu-height: 60px;
@@ -7,7 +7,9 @@ $menu-height: 60px;
 // COLORS
 // $main-color: #1d4e89;
 $main-color: rgba(32, 32, 32, 0.9);
-$color-gray: rgba(30, 30, 30, 0.95);
+//$color-gray: rgba(30, 30, 30, 0.95);
+$color-gray: #444444;
+$color-white: #c4c4c4;
 
 // GRID
 $breakpoint_sm: 576px;

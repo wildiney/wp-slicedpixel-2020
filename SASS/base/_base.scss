@@ -7,40 +7,25 @@
 }
 
 html {
-  font-family: $fontFamily;
-  // 10px/16px = 62.5%
-  font-size: 62.5%;
-  line-height: 1.4;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  background-color: whitesmoke;
   box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px -> 1rem = 10px
+}
+
+body {
+  font-family: $font-family;
+  color: $color-gray;
+  font-weight: 300;
+  line-height: 1.6;
   position: relative;
-  scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  margin: 0 0 1rem 0;
-}
-
-h3 {
-  margin: 0;
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(2, min-content);
+  grid-template-columns:
+    [full-start] 1fr [content-start] repeat(
+      12,
+      [col-start] minmax(min-content, 10rem) [col-end]
+    )
+    [content-end] 1fr [full-end];
 }
