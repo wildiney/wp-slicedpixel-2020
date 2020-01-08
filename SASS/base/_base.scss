@@ -17,6 +17,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -28,4 +29,15 @@ body {
       [col-start] minmax(min-content, 10rem) [col-end]
     )
     [content-end] 1fr [full-end];
+  scroll-behavior: smooth;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $color-gray;
+}
+a:hover {
+  color: darken($color-gray, 20%);
 }

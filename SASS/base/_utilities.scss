@@ -1,22 +1,24 @@
-@for $i from 1 through 5{
-  .mt-#{$i}{
-    margin-top:#{$i}rem !important;
+@for $i from 1 through 5 {
+  .mt-#{$i} {
+    margin-top: #{$i}rem !important;
   }
 }
-@for $i from 1 through 5{
-  .mb-#{$i}{
-    margin-bottom:#{$i}rem !important;
+@for $i from 1 through 5 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem !important;
   }
 }
-@for $i from 1 through 5{
-  .ml-#{$i}{
-    margin-left:#{$i}rem !important;
+@for $i from 1 through 5 {
+  .ml-#{$i} {
+    margin-left: #{$i}rem !important;
   }
 }
-@for $i from 1 through 5{
-  .mr-#{$i}{
-    margin-right:#{$i}rem !important;
+@for $i from 1 through 5 {
+  .mr-#{$i} {
+    margin-right: #{$i}rem !important;
   }
 }
 
-
+.hide {
+  display: none !important;
+}
