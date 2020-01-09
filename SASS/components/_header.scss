@@ -157,11 +157,11 @@
         display: flex;
         align-content: stretch;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         flex-direction: row;
 
         li {
-          flex: 1 0 auto;
+          flex: 0;
           align-self: center;
 
           padding: 1rem 2rem;
