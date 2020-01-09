@@ -20,7 +20,7 @@
         <?php //echo wp_trim_words(get_the_content(), 200) 
         ?>
 
-        <?php the_content(); ?>
+        <?php the_excerpt(); ?>
         <p><a class="btn mt-2" href="<?php the_permalink(); ?>">visualizar projeto</a></p>
       </div>
     </div>
