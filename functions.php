@@ -31,10 +31,10 @@ add_theme_support('post-thumbnails');
 function custom_post_types()
 {
   register_post_type('works', array(
-    'supports'=>array('title','editor','page-attributes', 'thumbnail'),
+    'supports' => array('title', 'editor', 'excerpt', 'page-attributes', 'thumbnail'),
     'public' => true,
     'has_archive' => true,
-    'taxonomies'=>array('category'),
+    'taxonomies' => array('category'),
     'labels' => array(
       'name' => 'Works',
       'add_new_item' => 'Add new Work',
@@ -55,8 +55,7 @@ function custom_post_types()
       'all_items' => 'All Banners',
       'singular_name' => 'Banner'
     ),
-          'menu_icon' => 'dashicons-file'
+    'menu_icon' => 'dashicons-file'
   ));
 }
 add_action('init', 'custom_post_types');
-?>
