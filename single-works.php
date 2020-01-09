@@ -25,7 +25,7 @@
       </div>
     </section>
 
-    <section class="works">
+    <section class="works" id="works">
       <div class="work__content">
         <?php the_content(); ?>
       </div>
