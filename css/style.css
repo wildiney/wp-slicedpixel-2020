@@ -340,6 +340,7 @@ a:hover {
     height: auto;
     background-color: transparent; }
     .header__menu.showhide {
+      height: auto;
       display: block; }
     .header__menu ul {
       height: 100%;
