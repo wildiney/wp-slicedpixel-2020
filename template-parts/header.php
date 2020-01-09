@@ -9,7 +9,7 @@ while ($banner->have_posts()) : $banner->the_post();
 endwhile;
 ?>
 <section class="header">
-    <div class="header__image" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0) 100%), url('<?php echo $bannerImage; ?>');"></div>
+    <div class="header__image" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.2) 100%), url('<?php echo $bannerImage; ?>');"></div>
     <div class="header__brand"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></div>
     <div class="header__lead">
         <h1><?php echo bloginfo('description'); ?></h1>

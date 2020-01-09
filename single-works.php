@@ -7,7 +7,7 @@
         <h1><?php the_title(); ?></h1>
       </div>
       <?php if (has_post_thumbnail()) : ?>
-        <div class="header__image" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0) 100%), url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
+        <div class="header__image" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.2) 100%), url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
       <?php endif; ?>
       <div class="menu__mobile">
         <span class="menu__mobile--lines"></span>
