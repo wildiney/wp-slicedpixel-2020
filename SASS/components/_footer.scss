@@ -21,3 +21,9 @@
     font-size: 1.2rem;
   }
 }
+
+@media only screen and (min-width: $breakpoint_md) {
+  .footer {
+    grid-row: 3/4;
+  }
+}

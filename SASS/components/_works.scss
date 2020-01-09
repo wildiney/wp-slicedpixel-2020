@@ -70,6 +70,7 @@
 
 @media only screen and (min-width: $breakpoint_md) {
   .works {
+    grid-row: 2/3;
     .work {
       &:not(:last-child) {
         border-bottom: none;
