@@ -152,7 +152,7 @@ a:hover {
 .works {
   padding-left: 2rem;
   padding-right: 2rem;
-  grid-row: 2/3;
+  grid-row: 3/4;
   grid-column: content-start/content-end;
   width: 100%;
   margin: 4rem auto; }
@@ -413,7 +413,7 @@ a:hover {
   height: 50vh; }
 
 .footer {
-  grid-row: 3/4;
+  grid-row: 4/5;
   grid-column: full-start/full-end;
   display: flex;
   flex-direction: row;
