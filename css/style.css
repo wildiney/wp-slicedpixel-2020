@@ -279,6 +279,7 @@ a:hover {
     transform-origin: center; }
     .header__menu.showhide {
       height: 1px;
+      display: none;
       overflow: hidden;
       transform-origin: center; }
     .header__menu ul {
