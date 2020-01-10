@@ -1,12 +1,22 @@
 <?php
-$banner = new WP_Query(array(
-    'posts_per_page' => 1,
-    'post_type' => 'home-banner'
-));
+if(is_category()){
+    $banner = new WP_Query(array(
+        'posts_per_page' => 1,
+        'post_type' => 'home-banner',
+        'category_name'=>single_term_title('',false)
+    ));
+} elseif(is_page()) {
+    $banner = new WP_Query(array(
+        'posts_per_page' => 1,
+        'post_type' => 'home-banner',
+        'category_name'=>'Home'
+    ));
+}
 
 while ($banner->have_posts()) : $banner->the_post();
     $bannerImage = get_the_post_thumbnail_url();
 endwhile;
+wp_reset_query();
 ?>
 <section class="header">
     <div class="header__brand"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></div>

@@ -17,6 +17,7 @@ function theme_features()
   #add_theme_support('custom-background');
   add_theme_support('automatic-feed-links');
   add_theme_support('post-thumbnails');
+  add_theme_support('category-thumbnails');
 }
 add_action('after_setup_theme', 'theme_features');
 
@@ -50,6 +51,7 @@ function custom_post_types()
     'menu_icon' => 'dashicons-portfolio'
   ));
 
+  register_taxonomy_for_object_type('category', 'home-banner');
   register_taxonomy_for_object_type('category', 'works');
   register_taxonomy_for_object_type('post_tag', 'works');
 }
@@ -57,14 +59,16 @@ add_action('init', 'custom_post_types');
 
 function add_categories_and_tags_to_queries($query)
 {
-  if (is_category() && $query->is_main_query()) {
+  if (is_category() && $query->is_main_query() && !is_admin()) {
     $post_type = get_query_var('post_type');
     if ($post_type) {
       $post_type = $post_type;
     } else {
-      $post_type = array('nav_menu_item', 'post', 'works','home-banner');
+      $post_type = array('nav_menu_item', 'post', 'works');
     }
     $query->set('post_type', $post_type);
+    // $query->set('orderby', 'title');
+    // $query->set('order', 'desc');
     return $query;
   }
 }
