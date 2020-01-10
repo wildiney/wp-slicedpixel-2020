@@ -40,7 +40,6 @@ function custom_post_types()
     'supports' => array('title', 'editor', 'excerpt', 'page-attributes', 'thumbnail'),
     'public' => true,
     'has_archive' => true,
-    //'taxonomies' => array('category'),
     'labels' => array(
       'name' => 'Works',
       'add_new_item' => 'Add new Work',
@@ -56,27 +55,14 @@ function custom_post_types()
 }
 add_action('init', 'custom_post_types');
 
-// function add_categories_and_tags_to_queries($wp_query)
-// {
-//   if ($wp_query->get('tag') || $wp_query->get('category_name')) {
-//     $posttypes_list = $wp_query->get('post_type');
-//     if (is_string($posttypes_list))
-//       $posttypes_list[] = $posttypes_list;
-
-//     $posttypes_list[] = 'page';
-//     $wp_query->set('post_type', $posttypes_list);
-//   }
-// }
-// add_action('pre_get_posts', 'add_categories_and_tags_to_queries');
-
 function add_categories_and_tags_to_queries($query)
 {
-  if (is_category()) {
+  if (is_category() && $query->is_main_query()) {
     $post_type = get_query_var('post_type');
     if ($post_type) {
       $post_type = $post_type;
     } else {
-      $post_type = array('nav_menu_item', 'post', 'works');
+      $post_type = array('nav_menu_item', 'post', 'works','home-banner');
     }
     $query->set('post_type', $post_type);
     return $query;
