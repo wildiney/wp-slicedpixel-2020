@@ -10,7 +10,6 @@ endwhile;
 wp_reset_query();
 ?>
 <section class="header">
-    <div class="header__image" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.2) 100%), url('<?php echo $bannerImage; ?>');"></div>
     <div class="header__brand"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></div>
     <div class="header__lead">
         <h1><?php
@@ -35,4 +34,6 @@ wp_reset_query();
     <div class="header__scroll">
         <a href="#works"><i class="header__scroll--arrow"></i></a>
     </div>
+    <div class="header__image" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.2) 100%), url('<?php echo $bannerImage; ?>');"></div>
+
 </section>

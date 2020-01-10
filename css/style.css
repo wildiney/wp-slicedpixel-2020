@@ -73,7 +73,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: calc(var(--vh, 1vh) * 100) repeat(2, min-content);
+  grid-template-rows: 100vh repeat(2, min-content);
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [content-end] 1fr [full-end];
   scroll-behavior: smooth; }
 
@@ -155,15 +155,16 @@ a:hover {
   grid-row: 2/3;
   grid-column: content-start/content-end;
   width: 100%;
-  margin: 4rem auto; }
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
   .works .work {
     width: 100%;
     display: grid;
     grid-template-rows: min-content min-content;
     grid-template-columns: min-content; }
     .works .work:not(:last-child) {
-      margin-bottom: 4rem;
-      padding-bottom: 4rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
       border-bottom: 1px solid #444444; }
     .works .work__thumbnail {
       grid-row: 1/2;
@@ -171,10 +172,15 @@ a:hover {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      overflow: hidden; }
       .works .work__thumbnail img {
         display: block;
-        width: 100%; }
+        width: 100%;
+        height: 100%;
+        transition: all 2s ease-in-out; }
+        .works .work__thumbnail img:hover {
+          transform: scale(1.1); }
     .works .work__content {
       grid-row: 2/3;
       grid-column: 2/3; }
@@ -256,8 +262,9 @@ a:hover {
   grid-column: full-start/full-end;
   align-items: center;
   display: grid;
-  grid-template-rows: 7rem 1fr 7rem;
-  grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); }
+  grid-template-rows: 10rem 1fr 14rem;
+  grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
+  overflow: hidden; }
   .header__image {
     background-repeat: no-repeat;
     background-position: center;
@@ -267,16 +274,17 @@ a:hover {
     width: 100%;
     height: 100%;
     transform: scale(1);
-    z-index: -1;
-    transition: 1s all ease-out;
-    object-fit: cover; }
+    transition: 3s all ease-in-out;
+    object-fit: cover;
+    overflow: hidden; }
     .header__image:hover {
-      transform: scale(1.05); }
+      transform: scale(1.1); }
   .header__brand {
     grid-row: 1/2;
-    grid-column: 1/2;
+    grid-column: 1/3;
     padding: 0 2rem;
-    font-size: 2rem; }
+    font-size: 2.5rem;
+    z-index: 100; }
     .header__brand a:link,
     .header__brand a:visited,
     .header__brand a:active {
@@ -285,18 +293,21 @@ a:hover {
   .header__lead {
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-top: -10rem;
     grid-row: 2/3;
     grid-column: 1/3;
     text-align: center;
     font-size: 9vw;
-    color: #c4c4c4; }
+    color: #c4c4c4;
+    z-index: 99; }
   .header__menu {
     position: absolute;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     transition: all 500ms ease-out;
-    transform-origin: center; }
+    transform-origin: center;
+    z-index: 98; }
     .header__menu.showhide {
       height: 1px;
       display: none;
@@ -331,9 +342,10 @@ a:hover {
     text-align: center;
     align-items: center;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    z-index: 97; }
     .header__scroll--arrow {
-      border-width: 0 1rem 1rem 0;
+      border-width: 0 0.5rem 0.5rem 0;
       border-color: rgba(255, 255, 255, 0.7);
       border-style: solid;
       display: inline-block;
@@ -394,7 +406,7 @@ a:hover {
 
 .menu__mobile {
   position: fixed;
-  top: 1.5rem;
+  top: 3.4rem;
   right: 2rem;
   z-index: 100;
   width: 6rem;
@@ -428,11 +440,18 @@ a:hover {
 
 .single-works .container,
 .archive .container {
-  grid-template-rows: 50vh minmax(40vh, min-content) min-content; }
+  grid-template-rows: 50vh minmax(41vh, min-content) min-content; }
 
 .single-works .header,
 .archive .header {
   height: 50vh; }
+  .single-works .header__lead,
+  .archive .header__lead {
+    margin-top: 0rem; }
+  .single-works .header__scroll,
+  .archive .header__scroll {
+    height: 10rem;
+    align-items: flex-start; }
 
 .footer {
   grid-row: 3/4;
