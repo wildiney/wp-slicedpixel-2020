@@ -73,7 +73,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh repeat(2, min-content);
+  grid-template-rows: calc(var(--vh, 1vh) * 100) repeat(2, min-content);
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [content-end] 1fr [full-end];
   scroll-behavior: smooth; }
 
