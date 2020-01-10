@@ -237,7 +237,8 @@
   }
 }
 
-.single-works {
+.single-works,
+.archive {
   .container {
     grid-template-rows: 50vh minmax(40vh, min-content) min-content;
   }

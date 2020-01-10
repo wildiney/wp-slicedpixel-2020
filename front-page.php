@@ -17,8 +17,9 @@
           <h2 class="work__title"><?php echo get_the_title(); ?></h2>
         </a>
 
-        <?php //echo wp_trim_words(get_the_content(), 200) 
-        ?>
+        <p class="work__categories">
+          <?php the_category(' '); ?>
+        </p>
 
         <?php the_excerpt(); ?>
         <p><a class="btn mt-2" href="<?php the_permalink(); ?>">visualizar projeto</a></p>
