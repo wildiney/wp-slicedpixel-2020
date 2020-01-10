@@ -7,7 +7,6 @@ $banner = new WP_Query(array(
 while ($banner->have_posts()) : $banner->the_post();
     $bannerImage = get_the_post_thumbnail_url();
 endwhile;
-wp_reset_query();
 ?>
 <section class="header">
     <div class="header__brand"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></div>
