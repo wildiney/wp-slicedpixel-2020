@@ -57,6 +57,16 @@ function custom_post_types()
     ),
     'menu_icon' => 'dashicons-file'
   ));
+
+  register_taxonomy(  
+    'works',  // this is the custom post type(s) I want to use this taxonomy for
+    array(  
+        'hierarchical' => false,  
+        'label' => 'Works Category',  
+        'query_var' => true,  
+        'rewrite' => true  
+    )
+    );
 }
 add_action('init', 'custom_post_types');
 
