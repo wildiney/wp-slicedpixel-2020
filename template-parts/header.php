@@ -1,11 +1,12 @@
 <?php
+
 if(is_category()){
     $banner = new WP_Query(array(
         'posts_per_page' => 1,
         'post_type' => 'home-banner',
         'category_name'=>single_term_title('',false)
     ));
-} elseif(is_page()) {
+} elseif(is_front_page()){
     $banner = new WP_Query(array(
         'posts_per_page' => 1,
         'post_type' => 'home-banner',
