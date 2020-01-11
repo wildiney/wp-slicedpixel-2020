@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php get_template_part('template-parts/header-frontpage'); ?>
+<?php get_template_part('template-parts/header'); ?>
 <section class="works" id="works">
   <?php
   $works = new WP_Query(array(
