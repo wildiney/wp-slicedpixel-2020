@@ -510,6 +510,17 @@ input[type="submit"] {
     height: 10rem;
     align-items: flex-start; }
 
+.frontpage .container {
+  grid-template-rows: 100vh minmax(41vh, min-content) min-content; }
+
+.frontpage .header {
+  height: 100vh; }
+  .frontpage .header__lead {
+    margin-top: 0rem; }
+  .frontpage .header__scroll {
+    height: 10rem;
+    align-items: flex-start; }
+
 .footer {
   grid-row: 3/4;
   grid-column: full-start/full-end;

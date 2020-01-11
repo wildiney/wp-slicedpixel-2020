@@ -10,6 +10,11 @@
 
   <?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php 
+$class='';
+if(is_front_page()){
+  $class='frontpage';
+}
+?>
+<body <?php body_class($class); ?>>
   <div class="container">

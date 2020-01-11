@@ -261,3 +261,19 @@
     }
   }
 }
+
+.frontpage{
+  .container{
+    grid-template-rows: 100vh minmax(41vh, min-content) min-content;
+  }
+  .header {
+    height: 100vh;
+    &__lead {
+      margin-top: 0rem;
+    }
+    &__scroll {
+      height: 10rem;
+      align-items: flex-start;
+    }
+  }
+}
