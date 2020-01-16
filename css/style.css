@@ -360,7 +360,7 @@ input[type="submit"] {
     background-color: rgba(0, 0, 0, 0.9);
     transition: all 500ms ease-out;
     transform-origin: center;
-    z-index: 98; }
+    z-index: 110; }
     .header__menu.showhide {
       height: 1px;
       display: none;

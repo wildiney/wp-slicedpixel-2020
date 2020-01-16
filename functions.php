@@ -73,3 +73,36 @@ function add_categories_and_tags_to_queries($query)
   }
 }
 add_filter('pre_get_posts', 'add_categories_and_tags_to_queries');
+
+function custom_add_image_sizes()
+{
+  add_image_size('sm', 576, 9999);
+  add_image_size('md', 768, 9999);
+  add_image_size('lg', 992, 9999);
+  add_image_size('xl', 1200, 9999);
+  add_image_size('full', 9999, 900);
+}
+add_action('after_setup_theme', 'custom_add_image_sizes');
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for post thumbnails.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array $attr       Attributes for the image markup.
+ * @param int   $attachment Image attachment ID.
+ * @param array $size       Registered image size or flat array of height and width dimensions.
+ * @return array The filtered attributes for the image markup.
+ */
+function twentyseventeen_post_thumbnail_sizes_attr($attr, $attachment, $size)
+{
+  if (is_archive() || is_search() || is_home()) {
+    $attr['sizes'] = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
+  } else {
+    $attr['sizes'] = '100vw';
+  }
+
+  return $attr;
+}
+add_filter('wp_get_attachment_image_attributes', 'twentyseventeen_post_thumbnail_sizes_attr', 10, 3);

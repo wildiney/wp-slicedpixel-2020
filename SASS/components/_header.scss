@@ -67,7 +67,7 @@
     background-color: rgba(0, 0, 0, 0.9);
     transition: all 500ms ease-out;
     transform-origin: center;
-    z-index: 98;
+    z-index: 110;
 
     &.showhide {
       height: 1px;
@@ -262,8 +262,8 @@
   }
 }
 
-.frontpage{
-  .container{
+.frontpage {
+  .container {
     grid-template-rows: 100vh minmax(41vh, min-content) min-content;
   }
   .header {

@@ -4,10 +4,11 @@
   "description": "Wordpress theme for SlicedPixel.com",
   "main": "index.php",
   "scripts": {
+    "compile:scss": "node-sass ./sass/style.scss ./css/style.css",
     "watch:scss": "node-sass ./sass/style.scss ./css/style.css -w",
+    "compile:js": "tsc ./js/scripts.ts --watch",
     "devserver": "cd ../../../ && php -S localhost:8300",
     "start": "npm-run-all watch:scss prefix:css compress:css",
-    "compile:scss": "node-sass ./sass/style.scss ./css/style.css",
     "prefix:css": "postcss ./css/style.css --use autoprefixer -b \"last 10 versions\" -o ./css/style.prefixed.css",
     "compress:css": "node-sass ./css/style.prefixed.css ./css/style.min.css --output-style compressed",
     "build": "npm-run-all compile:scss prefix:css compress:css"
